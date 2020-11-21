@@ -1,98 +1,365 @@
-// 变量 $+变量名
-$w:400px;
-$h:200px;
-$c:red;
-$len:50%*10; // 500%
-/* 标题样式 */
-h1{
-  width: $w;
-  height: $h;
-  color: $c;
-  background-color: #ccc;
+/* 公共样式 */
+body{
+	font-size: 12px;
+	// color: #333;
+	min-width: 1206px;
 }
 
-// sass中的注释有两种
-// 1. // sass有的注释，不会被编译到css文件中
-// /* xxx */ 会被编译到css文件中
+#container {
+    width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
-// 嵌套语法
-.box{
-  width: $w;
-  background-color: lightblue;
-  h2{
-    font-size: 30px;
-    color: blue;
-  }
-  .show{
-    width: 300px;
+/* 小导航页 */
+#wxScreen{
+    width: 1349px;
+    height: 120px;
+    background-image:url('../img/wxS.jpg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: auto 120px;
+}
+#top{
+    width: 100%;
+    height: 40px;
+    background: #333333;
+    /* padding-left: 62px; */
+    /* float: left; */
+    .lString{
+        color: #424242;
+        margin: 0 2px;
+    }
+}
+
+#top>#container #topNav-rt>a:hover{
+    color: aliceblue;
+}
+
+#container>a{
+    color: #B0B0B0;
+    line-height: 40px;  
+    height: 40px;
+    /* font-size: 40px; */
+}
+#container>a:hover{
+    color: white;
+}
+
+#topNav-rt{
+    width: 260px;
+    height: 40px;
+    float: right;
+}
+
+#topNav-rt .nav_link{
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    color: #B0B0B0;
+    padding: 0 2.5px;
+}
+#topNav-rt .link{
+    padding: 0 0;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+}
+#topNav-rt .nav_new{
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    width: 68px;
+    color: #B0B0B0;
+
+}
+
+/* 购物车 */
+#nav_shopChart {
+    width: 120px;
+    height: 40px;
+    background: #424242;
+    font-size: 12px;
+    float: right;
+    text-align: center;
+    line-height: 40px;
+}
+#nav_shopChart #nav_shopChart_word:hover{
+    color: #B0B0B0;
+}
+
+#nav_shopChart:hover{
+    background: white;
+    position: relative;
+    color:orangered;
+}
+
+#topNav-rt #index_miniChart{
+    width: 316px;
+    position: absolute; 
+    top: 40px;
+    right: 0px;
+    display: none;
+    z-index:1;
+    box-shadow: 5px 0px 5px -5px black, -5px 0px 5px -5px black;
+    box-sizing: border-box;
+    background-color: white;
+}
+#index_miniChart{
+    /* width: 158px; */
+    /* height: 50px; */
+    color: yellowgreen;
+    display: absolute;
+    text-align: center;
+    padding: 30px 0;
+    box-sizing:content-box;
+    z-index: 9900
+}
+
+/* 触摸购物车产生购物车内容框 */
+#nav_shopChart:hover #index_miniChart{
+    display: block; 
+    z-index: 9900
+        
+}
+
+/* 大导航 */
+
+#sec_Nav{
     height: 100px;
-    span{
-      color: red;
-    }
-    p{
-      color: yellow;
-    }
-  }
+    
 }
 
-// & 指向父选择器
-a{
-  color: blue;
-  &:hover{
-    color: red;
-  }
+#miLogo{
+    width: 55px;
+    height: 55px;
+    background-color:#ff6700;
+    float: left;
+    margin: 22px 3.5px 0;
+    /* opacity: 1; */
 }
-.content{
-  width: 500px;
-  &-title{
-    color: red;
-  }
-  &-main{
-    color: blue;
-  }
+#miLogo>h1>img{
+    margin-left: 2px;
+    margin-top: 2px;
 }
 
-// @import 引入外部样式
-@import 'header.scss';
+#sec_NavBig{
+    float: left;
+    width: 702px;
+    height: 88px;
+    margin: 0;
+    padding: 0 0 0 30px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-left: 142px; 
+    line-height: 100px;
+    /* position: relative; */
+}
+.nav_lis>a{
+    float: left;
+    padding: 0 10px 38px;
+}
 
-// @mixin 混合器
-@mixin nostyle {
-  list-style: none;
-  li{
+/* 搜索框 */
+#NavBig_search{
+    float: right;
+    width: 296px;
+    margin-top: 25px;
+    
+}  
+    
+#NavBig_search>index_search:hover{
+    /* text-decoration:none; */
+    border-color: gray;
+}
+
+/* 大导航触摸字体变红 */
+#sec_NavBig .nav_lis>a:hover{
+    color: orangered;  
+}
+/* 搜索框点击变橙 */
+#NavBig_search>input:focus{
+    border-color: orange;
+}
+#NavBig_search .index_submit:hover{
+    background-color: orange;
+}
+.index_search{
+    width: 245px;
+    height: 50px;
+    border: 1px solid #B0B0B0;
+    box-sizing: border-box;
+    padding: 0 10px;
+    float: left;
+/*     position: absolute;
+    bottom:0;
+    right: 0; */
+    /* position: relative; */
+}
+
+.index_submit{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #B0B0B0;
+    background: url("../img/放大镜.png") no-repeat center;
+    background-size: 80%;
+    overflow: hidden;
+
+}
+
+
+/* 搜索框下拉框 */
+#res_goods{
+    position:absolute;
+    top: 74px;
+    width: 243px;
+    height: 240px;
+    border: 1px solid orange;
+    display: none;
+    overflow: hidden;
+    z-index: 100;
+}
+#NavBig_search>input:focus #res_goods{
+    display: show;
+}
+
+#res_goods>li{
+    line-height: 30px;
+    text-align: left;
+}
+#res_goods>li:hover{
+    background-color: plum;
+    cursor:pointer;
+    color: orangered;
+}
+
+
+/* 导航下浮框手机链接 */
+#down_menu{
+    height: 230px;
+    /* width: 100%; */
+    border-top: 1px solid black;
+    margin-top: 100px;
+    border: 1px solid black;
+    background-color: blue;
+}
+/* 触摸字体出现导航下浮框手机链接 */
+#B_nav_father{
+    position: relative;
+}
+
+#down_goods{
+    top: 260px;
+    left: 0;
+    z-index: 24;
+    width: 100%;
+    height: 0;
+    border-top: 1px solid #e0e0e0;
+    background: #fff;
+    /* overflow: hidden; */
+}
+/* .all #sec_NavBig .nav_lis>a:hover {
+    display: list-item;
+} */
+
+.down_list{
+    margin: 0;
     padding: 0;
-    color: blue;
-  }
+    list-style-type: none;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    /* display: none; */
 }
-.list{
-  width: 500px;
-  @include nostyle;
+.down_list a{
+    color: #757575;
+}
+.down_list li{
+    position: relative;
+    float: left;
+    width: 180px;
+    padding: 35px 12px 0;
+    text-align: center;
+
+}
+.down_lis_div{
+    width: 160px;
+    height: 110px;
+    margin: 0 auto 16px;
+    text-align: center;
+    border-left: 1px solid black;
+    box-sizing: border-box;
+}
+.first .down_lis_div{
+    border: none;
+}
+.price{
+    margin: 0;
+    line-height: 20px;
+    color: #ff6700;
 }
 
-// 混合器传参
-@mixin common($w,$h,$c) {
-  width: $w;
-  height: $h;
-  color: $c;
+
+/* 轮播图 */
+//轮播图大框
+.home_Pic_container{
+    position: relative;
 }
-.box1{
-  background-color: #ccc;
-  @include common(500px,200px,red);
-}
-.box2{
-  padding: 10px;
-  @include common(300px,100px,blue);
+.home_Pic{
+    position: relative;
+    margin-bottom: 26px;
 }
 
-// 继承
-.box3{
-  padding: 20px;
-  margin: 10px;
-  font-size: 20px;
+/* 轮播图 */
+#down_menu{
+    overflow: hidden;
+    height: 100px;
 }
-.box4{
-  width: 500px;
-  background: pink;
-  @extend .box3;
+#lunBo{
+    height: 300px;
+    background-color: blue;
+}
+#lunBo>li{
+    float: left;
+}
+#lunBo>li>a{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+.menuPic{
+    width: 160px;
+    height: 110px;
 }
 
 
+
+.home_Pic{
+    float: left;
+}
+.slider_image{
+    float: left;
+}
+
+#slider_pointer{
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    z-index: 10;
+}
+#slider_pointer>a{
+    width: 6px;
+    height: 6px;
+    border: 0px solid #fff;
+    border-color: hsla(0,0%,100%,.3);
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0,0,0,.4);
+    opacity: 1; 
+}
+
+.hoverBox{
+    display: none;
+}
