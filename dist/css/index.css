@@ -11,7 +11,7 @@ body {
 
 /* 小导航页 */
 #wxScreen {
-  width: 1349px;
+  width: 100%;
   height: 120px;
   background-image: url("../img/wxS.jpg");
   background-repeat: no-repeat;
@@ -139,17 +139,13 @@ body {
 
 .nav_lis > a {
   float: left;
-  padding: 0 10px 38px; }
+  margin: 0 10px 38px; }
 
 /* 搜索框 */
 #NavBig_search {
   float: right;
   width: 296px;
   margin-top: 25px; }
-
-#NavBig_search > index_search:hover {
-  /* text-decoration:none; */
-  border-color: gray; }
 
 /* 大导航触摸字体变红 */
 #sec_NavBig .nav_lis > a:hover {
@@ -168,11 +164,7 @@ body {
   border: 1px solid #B0B0B0;
   box-sizing: border-box;
   padding: 0 10px;
-  float: left;
-  /*     position: absolute;
-    bottom:0;
-    right: 0; */
-  /* position: relative; */ }
+  float: left; }
 
 .index_submit {
   background-color: white;
@@ -207,19 +199,12 @@ body {
   color: orangered; }
 
 /* 导航下浮框手机链接 */
-#down_menu {
-  height: 230px;
-  /* width: 100%; */
-  border-top: 1px solid black;
-  margin-top: 100px;
-  border: 1px solid black;
-  background-color: blue; }
-
 /* 触摸字体出现导航下浮框手机链接 */
 #B_nav_father {
   position: relative; }
 
 #down_goods {
+  display: flex;
   top: 260px;
   left: 0;
   z-index: 24;
@@ -229,21 +214,9 @@ body {
   background: #fff;
   /* overflow: hidden; */ }
 
-/* .all #sec_NavBig .nav_lis>a:hover {
-    display: list-item;
-} */
 .down_list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  font-size: 12px;
   position: absolute;
-  left: 0;
-  top: 100px;
-  /* display: none; */ }
-
-.down_list a {
-  color: #757575; }
+  flex: 1; }
 
 .down_list li {
   position: relative;
@@ -318,6 +291,3 @@ body {
   overflow: hidden;
   background: rgba(0, 0, 0, 0.4);
   opacity: 1; }
-
-.hoverBox {
-  display: none; }
