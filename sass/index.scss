@@ -5,7 +5,67 @@ body{
 	min-width: 1206px;
 }
 
-#container {
+// 返回顶部
+.backTop{
+    width: 20px;
+    height: 30px;
+    position: fixed;
+    left: 1290px;
+    bottom: 50px;
+    background-color: #fff;
+    z-index: 9999;
+    background: url('../img/totop.png') no-repeat;
+    // background-position: 50%;
+    background-size: 20px 20px;
+}
+.backTop:hover{
+    background: url('../img/totop_hover.png') no-repeat;
+    background-size: 20px 20px;
+    cursor: pointer;
+
+}
+
+//右侧便捷导航栏
+.rightNav{
+    left: 50.15%;
+    right: auto;
+    margin-left: 613px;
+    bottom: 110px;
+    float: right;
+    position: fixed;
+    a{
+        display: block; 
+        width: 25px;
+        height: 40px;   
+        position: relative;
+        background-color: #fff;
+        border: 1px solid #f5f5f5;
+        div{
+            line-height: 40px;
+            // border-bottom: ;
+            // padding: 0 0 5px 0;
+            img{
+                align-items: center;
+                width: 20px;
+                height: 20px;
+            //  padding-top: 10px;
+                // opacity: 1;  
+            }
+            .hover{
+              opacity: 0;  
+                position: absolute;
+            }
+            .static:hover .hover{
+              opacity: 1;     
+            }
+            .static:hover{
+                opacity: 0;     
+              }
+        }
+    }
+}
+
+.container {
     width: 1226px;
     margin-right: auto;
     margin-left: auto;
@@ -32,17 +92,17 @@ body{
     }
 }
 
-#top>#container #topNav-rt>a:hover{
+#top>.container #topNav-rt>a:hover{
     color: aliceblue;
 }
 
-#container>a{
+.container>a{
     color: #B0B0B0;
     line-height: 40px;  
     height: 40px;
     /* font-size: 40px; */
 }
-#container>a:hover{
+.container>a:hover{
     color: white;
 }
 
@@ -119,7 +179,7 @@ body{
 /* 触摸购物车产生购物车内容框 */
 #nav_shopChart:hover #index_miniChart{
     display: block; 
-    z-index: 9900
+    z-index: 9900;
         
 }
 
@@ -167,11 +227,6 @@ body{
     margin-top: 25px;
     
 }  
-    
-// #NavBig_search>.index_search:hover{
-//     /* text-decoration:none; */
-//     border-color: gray;
-// }
 
 /* 大导航触摸字体变红 */
 #sec_NavBig .nav_lis>a:hover{
@@ -245,8 +300,9 @@ body{
     z-index: 24;
     width: 100%;
     height: 0;
-    border-top: 1px solid #e0e0e0;
     background: #fff;
+    position: absolute;
+
     /* overflow: hidden; */
 }
 
@@ -254,23 +310,31 @@ body{
 .down_list{
     position: absolute;
     flex: 1;
+    display: none;
+    z-index: 99;
+    background-color: #fff;
+
 }
 
 .down_list li{
     position: relative;
     float: left;
-    width: 180px;
-    padding: 35px 12px 0;
+    width: 204px;
+    height: 201px;
+    padding: 35px 1px  0;
     text-align: center;
 
 }
 .down_lis_div{
-    width: 160px;
-    height: 110px;
-    margin: 0 auto 16px;
+    // margin: 0 auto 16px;
     text-align: center;
     border-left: 1px solid black;
     box-sizing: border-box;
+}
+.down_lis_div img{
+    width: 160px;
+    height: 110px;
+
 }
 .first .down_lis_div{
     border: none;
@@ -284,58 +348,90 @@ body{
 
 /* 轮播图 */
 //轮播图大框
-.home_Pic_container{
-    position: relative;
+.slider{
+    // position: relative;
+}   
+.swiper-container{
+    // position: relative;
+    // margin-bottom: 26px;
 }
-.home_Pic{
-    position: relative;
-    margin-bottom: 26px;
-}
-
-/* 轮播图 */
-#down_menu{
-    overflow: hidden;
-    height: 100px;
-}
-#lunBo{
-    height: 300px;
-    background-color: blue;
-}
-#lunBo>li{
-    float: left;
-}
-#lunBo>li>a{
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-}
-.menuPic{
-    width: 160px;
-    height: 110px;
+.slider .swiper-wrapper .first_pic{
+    width: 1226px;
+    height: 460px;
 }
 
 
-
-.home_Pic{
-    float: left;
-}
-.slider_image{
-    float: left;
-}
-
-#slider_pointer{
+// 首页轮播图菜单
+.site-catalog{
+    width: 234px;
+    height: 460px;
+    // opacity: 0.5;
     position: absolute;
-    bottom: 0px;
-    right: 20px;
-    z-index: 10;
+    z-index: 24;
+
 }
-#slider_pointer>a{
-    width: 6px;
-    height: 6px;
-    border: 0px solid #fff;
-    border-color: hsla(0,0%,100%,.3);
-    border-radius: 10px;
-    overflow: hidden;
-    background: rgba(0,0,0,.4);
-    opacity: 1; 
+.site-catalog{
+    background-color: rgba(105,101,101,.6);
+    
+}
+.categoryList{
+    height: 420px;
+    border: 0;
+    margin: 20px 0px;
+    position: relative;
+
+}
+.site-catalog .category-li{
+    height: 42px;
+    // align-items: center;
+    padding: 0 0 0 30px; 
+
+}
+.site-catalog .category-li:hover{
+    background-color: #ff6700;
+}
+.site-catalog .category-li a{
+    text-align: center;
+    color: #fff;
+    line-height: 42px;
+}
+
+// 首页轮播图菜单 hover出现二级菜单
+.sec_category{
+    width: 992px;
+    position: absolute;
+    left: 234px;
+    top: -20px;
+    z-index: 25;
+    display: none;
+    .sec_category1{
+        width: 248px;
+        height: 462px;
+        // display: list-item;
+        text-align: center;   
+        background-color: white;
+        float: left;
+        li{
+            a{  
+                color: black;
+                width: 264px;
+                height: 40px;   
+                display: block;
+                font-size: 14px;
+                padding: 18px 20px;
+                img{
+                    margin-right: 12px;
+                    float: left;
+                    width: 40px;
+                    height: 40px;
+                }
+                span{
+                    // display: block;
+                    float: left;
+                    line-height: 40px;
+
+                }
+            }
+        }
+    }   
 }
