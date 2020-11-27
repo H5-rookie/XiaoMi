@@ -17,8 +17,8 @@ task('img', async ()=>{
 
 // 处理JS
 task('script', async ()=>{
-  src(['./js/*.js','!./js/swiper.min.js'])
-  .pipe(load.babel({ presets: ['@babel/env']}))
+  src('./js/*.js')
+  // .pipe(load.babel({ presets: ['@babel/env']}))
   .pipe(dest('./dist/js'))
   .pipe(load.connect.reload())
 })
@@ -39,13 +39,13 @@ task('sass', async ()=>{
 })
 //不需要编译的css ,最后要添加入take dev里
 task('css', async ()=>{
-  src('./not compile files/css/*.css')
+  src('./notCompileFiles/css/*.css')
   .pipe(dest('./dist/css'))
   .pipe(load.connect.reload())
 })
 //不需要编译的js ,最后要添加入take dev里
 task('js', async ()=>{
-  src('./not compile files/js/*.js')
+  src('./notCompileFiles/js/*.js')
   .pipe(dest('./dist/js'))
   .pipe(load.connect.reload())
 })

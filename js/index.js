@@ -20,22 +20,70 @@ var sec_category = document.querySelector('.sec_category')
 var touchLis = document.querySelector('.categoryList')
 var touchLis_li = document.querySelectorAll('.category-li')
 
-touchLis_li.onmouseover=function(){
+touchLis.onmouseover=function(){
+  console.log('2');
+}
+//touchLis_li 要遍历 
+touchLis.onmouseover=function(){
   sec_category.style.display='block'
+  console.log('1');
   // console.log(touchLis_li);
 }
-touchLis_li.onmouseleave=function(){
+touchLis.onmouseleave=function(){
   sec_category.style.display='none'
+  console.log('2');
 }
-touchLis_li.forEach((li)=>{
+
+/* touchLis_li.forEach((li)=>{
   li.onmouseover=function(){
     console.log(li);
     for(let i=0;i<touchLis_li.length; i++){
       touchLis_li[i].classList.remove('sec_category1')
     }
-    li.classList.add('sec_category1')
+    li.classList.add('sec_category1').innerHTML('templateNav')
   }
-})
+}) */
+
+/* var templateNav = `<div class='sec_category'>
+<ul class='sec_category1'>
+    <li>
+        <a href="">
+            <img src="./img/菜单手机.jpg" alt="">
+            <span>小米10 至尊纪念版</span>
+        </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+
+</ul>
+<ul class='sec_category1'>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+</ul>
+<ul class='sec_category1'>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+</ul>
+<ul class='sec_category1'>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+    <li><a href=""><img src="./img/菜单手机.jpg" alt=""> <span>小米10 至尊纪念版</span> </a> </li>
+
+</ul>
+</div>`
+ */
 
 
 // swiper初始化
@@ -59,9 +107,4 @@ var mySwiper = new Swiper ('.swiper-container', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   }
-
-  // 如果需要滚动条
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
 })   

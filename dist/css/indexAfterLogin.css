@@ -85,7 +85,6 @@ body {
   color: white; }
 
 #topNav-rt {
-  width: 260px;
   height: 40px;
   float: right; }
 
@@ -99,8 +98,10 @@ body {
 #topNav-rt .link {
   padding: 0 0;
   float: left;
+  color: #424242;
   text-align: center;
-  line-height: 40px; }
+  line-height: 40px;
+  margin: 0 10px; }
 
 #topNav-rt .nav_new {
   float: left;
@@ -111,6 +112,7 @@ body {
 
 /* 购物车 */
 #nav_shopChart {
+  margin-left: 10px;
   width: 120px;
   height: 40px;
   background: #424242;

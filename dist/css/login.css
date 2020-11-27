@@ -1,0 +1,126 @@
+.login-container {
+  width: 1130px;
+  margin: 0 auto; }
+  .login-container a {
+    background: url("https://account.xiaomi.com/static/res/7f6f2f5/account-static/respassport/acc-2014/img/mistore_logo.png") no-repeat;
+    display: block;
+    width: 200px;
+    height: 98px;
+    text-indent: -9999em; }
+
+.background {
+  /*     width: 100%;
+    height: 588px;
+    position: absolute;
+    left: 0;
+    top: 98px;
+ */ }
+  .background a {
+    display: block;
+    height: 588px;
+    background-image: url("https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/72644d9b8031286de3cc74e151aefd90.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    text-indent: -9999em; }
+
+.background {
+  position: relative; }
+
+#loginMain {
+  padding: 0 36px;
+  background-color: #ffffff;
+  position: absolute;
+  right: 96px;
+  top: 130px; }
+  #loginMain .nav {
+    padding: 27px 0 24px;
+    text-align: center;
+    font-size: 24px; }
+    #loginMain .nav a {
+      color: #666; }
+      #loginMain .nav a:hover {
+        color: orangered; }
+    #loginMain .nav i {
+      width: 1px;
+      height: 24px;
+      margin: 0 35px 0 34px;
+      border: 1px solid #e0e0e0;
+      background-color: #e0e0e0; }
+
+.loginBox div input {
+  width: 306px;
+  height: 22px;
+  line-height: 22px;
+  padding: 11px 16px 11px 14px;
+  display: block;
+  color: #4a4a4a;
+  margin-bottom: 14px;
+  border: 1px solid #e0e0e0; }
+
+.loginBox .login {
+  width: 346px;
+  height: 48px;
+  background-color: #ff6700;
+  line-height: 48px;
+  text-align: center;
+  border: none;
+  color: #ffffff;
+  margin: 0 0 14px 0; }
+
+.loginBox .otherLogin {
+  text-align: center; }
+  .loginBox .otherLogin span {
+    float: none; }
+    .loginBox .otherLogin span .phone {
+      display: block;
+      color: orangered; }
+  .loginBox .otherLogin a {
+    color: #999;
+    font-size: 14px; }
+  .loginBox .otherLogin span {
+    color: #999;
+    font-size: 14px; }
+  .loginBox .otherLogin .loginWay {
+    padding-top: 143px;
+    text-align: center; }
+    .loginBox .otherLogin .loginWay #loginLink a {
+      margin: 0 17px;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #0288d1; }
+      .loginBox .otherLogin .loginWay #loginLink a i {
+        display: block;
+        margin: 4px auto 0;
+        background-image: url("https://account.xiaomi.com/static/res/166d6dc/account-static/respassport/acc-2014/img/icons_type.png");
+        background-position: -19px 0;
+        width: 18px;
+        height: 18px;
+        background-color: #0288d1; }
+
+.pageBottom {
+  background: #fff;
+  margin-top: 0;
+  padding-top: 100px;
+  position: relative;
+  z-index: 4; }
+  .pageBottom .word {
+    text-align: center; }
+    .pageBottom .word ul li {
+      color: #757575;
+      display: inline-block;
+      font-size: 14px; }
+      .pageBottom .word ul li .jianti {
+        color: black; }
+      .pageBottom .word ul li a {
+        padding: 0 10px;
+        color: #757575; }
+        .pageBottom .word ul li a:hover {
+          color: black; }
+  .pageBottom p {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 10px; }

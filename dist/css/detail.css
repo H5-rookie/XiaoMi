@@ -1,0 +1,725 @@
+@charset "UTF-8";
+/*----public style Top----*/
+body {
+  font-size: 12px; }
+
+.container {
+  width: 1226px;
+  margin-right: auto;
+  margin-left: auto; }
+
+/* 小导航页 */
+#wxScreen {
+  width: 100%;
+  height: 120px;
+  background-image: url("../img/wxS.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: auto 120px; }
+
+#top {
+  width: 100%;
+  height: 40px;
+  background: #333333;
+  /* padding-left: 62px; */
+  /* float: left; */ }
+  #top .lString {
+    color: #424242;
+    margin: 0 2px; }
+
+#top > .container #topNav-rt > a:hover {
+  color: aliceblue; }
+
+.container > a {
+  color: #b0b0b0;
+  line-height: 40px;
+  height: 40px;
+  /* font-size: 40px; */ }
+
+.container > a:hover {
+  color: white; }
+
+#topNav-rt {
+  height: 40px;
+  float: right; }
+
+#topNav-rt .nav_link {
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  color: #b0b0b0;
+  margin: 0 10px; }
+  #topNav-rt .nav_link:hover {
+    color: #fff; }
+  #topNav-rt .nav_link i {
+    font-size: 12px;
+    line-height: 24px;
+    vertical-align: 4px; }
+
+#topNav-rt .link {
+  padding: 0 0;
+  float: left;
+  text-align: center;
+  color: #424242;
+  line-height: 40px; }
+
+#topNav-rt .nav_new {
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  width: 68px;
+  color: #b0b0b0;
+  margin-right: 20px; }
+
+/* 购物车 */
+#nav_shopChart {
+  width: 120px;
+  height: 40px;
+  background: #424242;
+  font-size: 12px;
+  float: right;
+  text-align: center;
+  line-height: 40px; }
+
+#nav_shopChart #nav_shopChart_word:hover {
+  color: #b0b0b0; }
+
+#nav_shopChart:hover {
+  background: white;
+  position: relative;
+  color: orangered; }
+
+#topNav-rt #index_miniChart {
+  width: 316px;
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  display: none;
+  z-index: 1;
+  box-shadow: 5px 0px 5px -5px black, -5px 0px 5px -5px black;
+  box-sizing: border-box;
+  background-color: white; }
+
+#index_miniChart {
+  /* width: 158px; */
+  /* height: 50px; */
+  color: yellowgreen;
+  display: absolute;
+  text-align: center;
+  padding: 30px 0;
+  box-sizing: content-box;
+  z-index: 9900; }
+
+/* 触摸购物车产生购物车内容框 */
+#nav_shopChart:hover #index_miniChart {
+  display: block;
+  z-index: 9900; }
+
+/* 大导航 */
+#sec_Nav {
+  height: 100px; }
+
+#miLogo {
+  width: 55px;
+  height: 55px;
+  background-color: #ff6700;
+  float: left;
+  margin: 22px 3.5px 0;
+  /* opacity: 1; */ }
+
+#miLogo > h1 > img {
+  margin-left: 2px;
+  margin-top: 2px; }
+
+#sec_NavBig {
+  float: left;
+  width: 702px;
+  height: 88px;
+  margin: 0;
+  padding: 0 0 0 30px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-left: 142px;
+  line-height: 100px;
+  /* position: relative; */ }
+
+.nav_lis > a {
+  float: left;
+  margin: 0 10px 38px; }
+
+/* 搜索框 */
+#NavBig_search {
+  float: right;
+  width: 296px;
+  margin-top: 25px; }
+
+/* 大导航触摸字体变红 */
+#sec_NavBig .nav_lis > a:hover {
+  color: orangered; }
+
+/* 搜索框点击变橙 */
+#NavBig_search > input:focus {
+  border-color: orange; }
+
+#NavBig_search .index_submit:hover {
+  background-color: orange; }
+
+.index_search {
+  width: 245px;
+  height: 50px;
+  border: 1px solid #b0b0b0;
+  box-sizing: border-box;
+  padding: 0 10px;
+  float: left; }
+
+.index_submit {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #b0b0b0;
+  background: url("../img/放大镜.png") no-repeat center;
+  background-size: 80%;
+  overflow: hidden; }
+
+/* 搜索框下拉框 */
+#res_goods {
+  position: absolute;
+  top: 74px;
+  width: 243px;
+  height: 240px;
+  border: 1px solid orange;
+  display: none;
+  overflow: hidden;
+  z-index: 100; }
+
+#NavBig_search > input:focus #res_goods {
+  display: show; }
+
+#res_goods > li {
+  line-height: 30px;
+  text-align: left; }
+
+#res_goods > li:hover {
+  background-color: plum;
+  cursor: pointer;
+  color: orangered; }
+
+/* 导航下浮框手机链接 */
+/* 触摸字体出现导航下浮框手机链接 */
+#B_nav_father {
+  position: relative; }
+
+#down_goods {
+  display: flex;
+  top: 260px;
+  left: 0;
+  z-index: 24;
+  width: 100%;
+  height: 0;
+  background: #fff;
+  position: absolute;
+  /* overflow: hidden; */ }
+
+.down_list {
+  position: absolute;
+  flex: 1;
+  display: none;
+  z-index: 99;
+  background-color: #fff; }
+
+.down_list li {
+  position: relative;
+  float: left;
+  width: 204px;
+  height: 201px;
+  padding: 35px 1px 0;
+  text-align: center; }
+
+.down_lis_div {
+  text-align: center;
+  border-left: 1px solid black;
+  box-sizing: border-box; }
+
+.down_lis_div img {
+  width: 160px;
+  height: 110px; }
+
+.first .down_lis_div {
+  border: none; }
+
+.price {
+  margin: 0;
+  line-height: 20px;
+  color: #ff6700; }
+
+/*----public style Bottom---- */
+.serve {
+  padding: 40px 0;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center; }
+  .serve ul li {
+    float: left;
+    width: 19.8%;
+    height: 25px;
+    border-right: 1px solid #e0e0e0;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center; }
+    .serve ul li a .iconfont-tool {
+      display: block;
+      background: url("./"); }
+
+.footer-link {
+  height: 252px;
+  padding: 20px 0; }
+  .footer-link .col-links {
+    float: left;
+    width: 160px; }
+    .footer-link .col-links dt {
+      margin: -1px 0 26px;
+      font-size: 14px;
+      line-height: 1.25;
+      color: #424242; }
+    .footer-link .col-links dd {
+      margin: 10px 0; }
+      .footer-link .col-links dd a {
+        color: #757575;
+        font-size: 12px; }
+  .footer-link .col-contact {
+    float: right;
+    width: 251px;
+    border-left: 1px solid #e0e0e0;
+    text-align: center;
+    color: #616161; }
+    .footer-link .col-contact h3 {
+      font-size: 22px;
+      line-height: 1;
+      color: #ff6700; }
+    .footer-link .col-contact p {
+      margin: 0 0 5px 0;
+      font-size: 12px; }
+    .footer-link .col-contact .staffService {
+      margin: 0 auto;
+      display: block;
+      color: orangered;
+      border: 1px solid orangered;
+      width: 118px;
+      height: 28px;
+      font-size: 12px;
+      line-height: 28px; }
+      .footer-link .col-contact .staffService:hover {
+        background-color: orangered;
+        color: #fff; }
+    .footer-link .col-contact .follow {
+      font-size: 12px;
+      margin-top: 10px;
+      position: relative; }
+      .footer-link .col-contact .follow a {
+        background: url("https://cdn.cnbj1.fds.api.mi-img.com/staticsfile/global/wb.png") 50% 0 no-repeat;
+        background-size: cover;
+        color: black;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 6px;
+        margin-top: -3px; }
+
+.colr {
+  background: #fafafa; }
+
+.site-info {
+  padding: 30px 0;
+  font-size: 12px;
+  background: #fafafa;
+  position: relative; }
+  .site-info .logo {
+    width: 57px;
+    height: 57px;
+    display: block;
+    position: absolute;
+    margin-right: 10px;
+    top: 30px;
+    left: 0;
+    text-align: left;
+    overflow: hidden; }
+  .site-info .info-text {
+    color: #b0b0b0;
+    padding-left: 67px; }
+    .site-info .info-text a {
+      margin: 0;
+      line-height: 18px; }
+
+.site-info-slogen {
+  clear: both;
+  margin: 30px auto 0;
+  width: 100%;
+  height: 19px;
+  background: url("https://cdn.cnbj1.fds.api.mi-img.com/staticsfile/global/slogan2020.png") no-repeat center 0; }
+
+/* -----Not public style----- */
+/* 固定通栏标题 */
+.navcss {
+  position: fixed;
+  top: 0px; }
+
+.phone-box {
+  position: relative;
+  z-index: 4;
+  background: #fff;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.07); }
+  .phone-box .phoneName {
+    position: relative;
+    height: 63px;
+    width: 100%;
+    margin-top: 0;
+    color: #616161; }
+    .phone-box .phoneName h2 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 60px;
+      color: #424242;
+      float: left; }
+    .phone-box .phoneName .con span {
+      margin: 0 0.5em;
+      color: #424242; }
+    .phone-box .phoneName .con .left {
+      float: left;
+      margin-left: 5px;
+      font-size: 12px;
+      margin-top: 21px; }
+      .phone-box .phoneName .con .left a {
+        color: #616161; }
+    .phone-box .phoneName .con .right {
+      float: right;
+      margin-top: 21px; }
+      .phone-box .phoneName .con .right a {
+        color: #616161;
+        font-size: 14px; }
+
+.phoneDetail {
+  margin: 32px 0 12px; }
+  .phoneDetail .phone_all {
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+    padding-bottom: 12px; }
+    .phoneDetail .phone_all .img_left {
+      width: 606px;
+      position: relative; }
+      .phoneDetail .phone_all .img_left .img_box {
+        position: absolute;
+        top: 0; }
+        .phoneDetail .phone_all .img_left .img_box .swiper-container {
+          margin: 0 auto;
+          position: relative;
+          overflow: hidden;
+          list-style: none;
+          padding: 0;
+          z-index: 1;
+          /* swiper 轮播图出bug不会自动轮播 */ }
+          .phoneDetail .phone_all .img_left .img_box .swiper-container .swiper-wrapper {
+            width: 560px;
+            height: 560px; }
+            .phoneDetail .phone_all .img_left .img_box .swiper-container .swiper-wrapper img {
+              width: 560px;
+              height: 560px; }
+    .phoneDetail .phone_all .product_rec {
+      flex: 1;
+      margin-left: 20px; }
+      .phoneDetail .phone_all .product_rec h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        font-weight: 400;
+        color: #212121; }
+      .phoneDetail .phone_all .product_rec .sale_rec {
+        color: #b0b0b0;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        padding-top: 8px;
+        line-height: 1.5; }
+      .phoneDetail .phone_all .product_rec .com_info {
+        color: #ff6700;
+        font-size: 14px;
+        margin-top: 14px; }
+      .phoneDetail .phone_all .product_rec .price_info {
+        font-size: 18px;
+        padding: 12px 0 10px;
+        color: #ff6700; }
+      .phoneDetail .phone_all .product_rec .line {
+        margin-top: 12px;
+        border-bottom: 1px solid #e0e0e0; }
+      .phoneDetail .phone_all .product_rec .address_box {
+        margin: 20px 0; }
+        .phoneDetail .phone_all .product_rec .address_box .product_address {
+          padding: 30px 50px;
+          position: relative;
+          background: #fafafa;
+          border: 1px solid #e0e0e0; }
+          .phoneDetail .phone_all .product_rec .address_box .product_address i {
+            position: absolute;
+            left: 20px;
+            top: 26px;
+            font-size: 20px;
+            color: #999; }
+          .phoneDetail .phone_all .product_rec .address_box .product_address .storageLocation {
+            display: inline-block;
+            font-size: 14px; }
+            .phoneDetail .phone_all .product_rec .address_box .product_address .storageLocation span {
+              font-size: 14px;
+              display: inline;
+              margin-right: 14px; }
+          .phoneDetail .phone_all .product_rec .address_box .product_address .storage {
+            color: #ff6700;
+            display: block; }
+      .phoneDetail .phone_all .product_rec .buy_option .buy_box_child {
+        display: block;
+        margin-bottom: 30px;
+        position: relative; }
+        .phoneDetail .phone_all .product_rec .buy_option .buy_box_child .option_box .title {
+          font-size: 18px; }
+        .phoneDetail .phone_all .product_rec .buy_option .buy_box_child ul {
+          margin: 0;
+          padding: 0;
+          display: block;
+          height: 108px; }
+          .phoneDetail .phone_all .product_rec .buy_option .buy_box_child ul li {
+            /*               .active {
+                color: #ff6700;
+                border-color: #ff6700;
+              } */
+            margin-right: 12px;
+            margin-top: 10px;
+            line-height: 42px;
+            height: 42px;
+            position: relative;
+            border: 1px solid #e0e0e0;
+            list-style: none;
+            cursor: pointer;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+            float: left;
+            width: 280px;
+            font-size: 16px;
+            text-align: center;
+            /*               a {
+                &:hover {
+                  color: #ff6700;
+                }
+              } */ }
+            .phoneDetail .phone_all .product_rec .buy_option .buy_box_child ul li:hover {
+              z-index: 3;
+              border-color: #ff6700; }
+            .phoneDetail .phone_all .product_rec .buy_option .buy_box_child ul li:hover a {
+              color: #ff6700; }
+          .phoneDetail .phone_all .product_rec .buy_option .buy_box_child ul .active {
+            z-index: 3;
+            border-color: #ff6700; }
+            .phoneDetail .phone_all .product_rec .buy_option .buy_box_child ul .active a {
+              color: #ff6700; }
+      .phoneDetail .phone_all .product_rec .service_box {
+        margin-bottom: 30px; }
+        .phoneDetail .phone_all .product_rec .service_box .service_item_box .title {
+          font-size: 18px;
+          margin-bottom: 15px;
+          line-height: 1; }
+          .phoneDetail .phone_all .product_rec .service_box .service_item_box .title a {
+            font-size: 14px;
+            float: right;
+            color: orangered; }
+        .phoneDetail .phone_all .product_rec .service_box .service_item_box ul {
+          width: 100%; }
+          .phoneDetail .phone_all .product_rec .service_box .service_item_box ul li {
+            border: 1px solid #e0e0e0;
+            margin-top: -1px;
+            background: #fff;
+            cursor: pointer;
+            padding: 30px 0;
+            position: relative;
+            display: flex; }
+            .phoneDetail .phone_all .product_rec .service_box .service_item_box ul li .icon-checkbox {
+              border-radius: 50%;
+              width: 36px;
+              height: 36px;
+              line-height: 36px;
+              margin-left: 30px;
+              float: left;
+              font-size: 24px;
+              margin-top: 10px;
+              text-align: center;
+              cursor: pointer; }
+              .phoneDetail .phone_all .product_rec .service_box .service_item_box ul li .icon-checkbox em {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                border: 1px solid #b0b0b0;
+                font-style: normal;
+                line-height: 24px;
+                color: #fff;
+                font-size: 12px;
+                vertical-align: middle;
+                margin-top: -4px; }
+            .phoneDetail .phone_all .product_rec .service_box .service_item_box ul li img {
+              width: 50px;
+              height: 50px;
+              margin-right: 15px;
+              margin-left: 10px;
+              float: left; }
+            .phoneDetail .phone_all .product_rec .service_box .service_item_box ul li .box {
+              flex: 1; }
+              .phoneDetail .phone_all .product_rec .service_box .service_item_box ul li .box h3 {
+                font-size: 18px;
+                margin: 0 0 10px 0;
+                font-weight: bold; }
+                .phoneDetail .phone_all .product_rec .service_box .service_item_box ul li .box h3 .price {
+                  font-style: normal;
+                  font-size: 14px;
+                  background: #ff6700;
+                  display: inline-block;
+                  padding: 2px 6px;
+                  border-radius: 20px;
+                  color: #fff;
+                  margin-left: 2px; }
+              .phoneDetail .phone_all .product_rec .service_box .service_item_box ul li .box .accident {
+                margin: 0;
+                padding: 0;
+                font-size: 14px;
+                height: 18px;
+                color: #b0b0b0;
+                width: 286px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin-top: 5px; }
+              .phoneDetail .phone_all .product_rec .service_box .service_item_box ul li .box .agreeBox {
+                font-size: 14px;
+                margin-top: 5px; }
+                .phoneDetail .phone_all .product_rec .service_box .service_item_box ul li .box .agreeBox .icon-checkbox {
+                  float: none;
+                  margin: 0;
+                  width: 14px;
+                  height: 14px;
+                  line-height: 14px;
+                  margin-right: 5px;
+                  margin-top: 2px;
+                  border-radius: 2px;
+                  display: inline-block; }
+                  .phoneDetail .phone_all .product_rec .service_box .service_item_box ul li .box .agreeBox .icon-checkbox em {
+                    margin-top: 0;
+                    border-radius: 1px;
+                    width: 24px;
+                    height: 24px;
+                    font-style: normal;
+                    line-height: 24px;
+                    color: #fff;
+                    font-size: 12px;
+                    vertical-align: middle; }
+                .phoneDetail .phone_all .product_rec .service_box .service_item_box ul li .box .agreeBox a {
+                  font-size: 14px;
+                  color: #ff6700;
+                  margin: 0 2px;
+                  display: inline-block; }
+                .phoneDetail .phone_all .product_rec .service_box .service_item_box ul li .box .agreeBox .price {
+                  position: absolute;
+                  right: 20px;
+                  bottom: 28px;
+                  color: #757575; }
+      .phoneDetail .phone_all .product_rec .selected_list {
+        background: #f9f9fa;
+        padding: 30px;
+        margin-bottom: 30px; }
+        .phoneDetail .phone_all .product_rec .selected_list ul li {
+          font-size: 14px;
+          list-style: none;
+          line-height: 30px;
+          color: #616161; }
+          .phoneDetail .phone_all .product_rec .selected_list ul li span {
+            float: right; }
+        .phoneDetail .phone_all .product_rec .selected_list .totalPrice {
+          color: #ff6700;
+          font-size: 24px;
+          padding-top: 20px; }
+      .phoneDetail .phone_all .product_rec .btn-box {
+        margin: 10px 0 20px 0; }
+        .phoneDetail .phone_all .product_rec .btn-box .sale-btn {
+          display: inline-block;
+          margin-right: 10px; }
+          .phoneDetail .phone_all .product_rec .btn-box .sale-btn .addToChart {
+            display: inline-block;
+            border: 1px solid #b0b0b0;
+            text-align: center;
+            width: 298px;
+            height: 52px;
+            line-height: 52px;
+            font-size: 16px;
+            background: #ff6700;
+            border-color: #ff6700;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.4s; }
+        .phoneDetail .phone_all .product_rec .btn-box .favorite-btn {
+          display: inline-block;
+          vertical-align: top; }
+          .phoneDetail .phone_all .product_rec .btn-box .favorite-btn .addLike {
+            display: block;
+            width: 140px;
+            height: 52px;
+            line-height: 52px;
+            padding: 0;
+            margin: 0;
+            border: 1px solid #b0b0b0;
+            text-align: center;
+            cursor: pointer;
+            -webkit-transition: all 0.4s;
+            transition: all 0.4s;
+            font-size: 16px;
+            position: relative;
+            background-color: #b0b0b0; }
+      .phoneDetail .phone_all .product_rec .after_sale_box span {
+        display: inline-block; }
+        .phoneDetail .phone_all .product_rec .after_sale_box span a {
+          display: inline-block;
+          margin-right: 15px;
+          line-height: 30px;
+          margin-bottom: 10px;
+          cursor: default;
+          white-space: nowrap;
+          color: #b0b0b0; }
+          .phoneDetail .phone_all .product_rec .after_sale_box span a i {
+            font-size: 20px;
+            display: inline-block;
+            font-style: normal;
+            vertical-align: middle; }
+          .phoneDetail .phone_all .product_rec .after_sale_box span a em {
+            font-style: normal;
+            display: inline-block;
+            margin-left: 2px;
+            vertical-align: middle; }
+
+.detail-box .title {
+  box-sizing: border-box; }
+  .detail-box .title .explainPrice {
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 1em 0; }
+
+.detail-box .img-box {
+  height: 189px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto; }
+  .detail-box .img-box img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate3d(-50%, 0, 0);
+    height: 100%; }
